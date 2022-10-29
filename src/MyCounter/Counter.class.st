@@ -24,3 +24,13 @@ Counter >> count [
 Counter >> count: n [
 	count := n
 ]
+
+{ #category : #accessing }
+Counter >> decrement [
+	count := count - 1
+]
+
+{ #category : #accessing }
+Counter >> increment [
+	count := count + 1
+]
