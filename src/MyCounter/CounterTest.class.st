@@ -13,6 +13,11 @@ CounterTest >> testCountIsSetAndRead [
 ]
 
 { #category : #tests }
+CounterTest >> testCounterStartingAt5 [
+	self assert: (Counter startingAt: 5) count equals: 5
+]
+
+{ #category : #tests }
 CounterTest >> testDecrement [
 	| c |
 	c := Counter new.
@@ -26,4 +31,9 @@ CounterTest >> testIncrement [
 	c := Counter new.
 	c count: 0; increment; increment.
 	self assert: c count equals: 2
+]
+
+{ #category : #tests }
+CounterTest >> testInitialize [
+	self assert: Counter new count equals: 0
 ]

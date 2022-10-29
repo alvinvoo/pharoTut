@@ -15,6 +15,11 @@ Class {
 	#category : #MyCounter
 }
 
+{ #category : #accessing }
+Counter class >> startingAt: anInteger [
+	^ self new count: anInteger.
+]
+
 { #category : #'var accessors' }
 Counter >> count [
 	^ count
@@ -33,4 +38,11 @@ Counter >> decrement [
 { #category : #accessing }
 Counter >> increment [
 	count := count + 1
+]
+
+{ #category : #initialization }
+Counter >> initialize [ 
+	"set initial value of count to 0"
+	
+	count := 0
 ]
