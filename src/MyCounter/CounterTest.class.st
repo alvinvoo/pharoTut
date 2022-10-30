@@ -10,6 +10,11 @@ CounterTest >> testAlternateCreationMethod [
 ]
 
 { #category : #tests }
+CounterTest >> testBetterPrintOn [
+	self assert: Counter new printString equals: 'a Counter with value: 0' 
+]
+
+{ #category : #tests }
 CounterTest >> testCountIsSetAndRead [
 	| c |
 	c := Counter new.
